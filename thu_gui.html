@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Lời ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fde2e4; /* Màu nền hồng phấn nhẹ nhàng */
+        }
+        .font-dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+        textarea {
+            border: 1px dashed #e5a7ac;
+            transition: box-shadow 0.3s ease;
+        }
+        textarea:focus {
+            box-shadow: 0 0 0 3px rgba(229, 167, 172, 0.5); /* Màu viền khi focus */
+            outline: none;
+        }
+        button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6">
+
+    <div class="bg-white shadow-xl rounded-lg w-full max-w-xl p-6 sm:p-10">
+        <header class="text-center mb-8">
+            <h1 class="font-dancing text-4xl sm:text-5xl text-[#d17c7c]">Gửi Anh</h1>
+        </header>
+
+        <!--
+            QUAN TRỌNG: THAY ĐỔI ĐỊA CHỈ EMAIL CỦA BẠN VÀO ĐÂY!
+            Tìm dòng action="mailto:DIA_CHI_EMAIL_CUA_BAN@example.com"
+            và thay DIA_CHI_EMAIL_CUA_BAN@example.com bằng email thật của bạn.
+        -->
+        <form action="mailto:DIA_CHI_EMAIL_CUA_BAN@example.com" method="post" enctype="text/plain">
+            
+            <div class="mb-6">
+                <label for="senderName" class="block text-sm font-medium text-gray-700 mb-1">Tên người gửi (Ký tên):</label>
+                <input type="text" name="TenNguoiGui" id="senderName" class="w-full p-3 border border-gray-300 rounded-md focus:ring-1 focus:ring-[#e5a7ac] focus:border-[#e5a7ac]" placeholder="Tên của em..." required>
+            </div>
+
+            <div class="mb-6">
+                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Tiêu đề thư:</label>
+                <input type="text" name="TieuDe" id="subject" class="w-full p-3 border border-gray-300 rounded-md focus:ring-1 focus:ring-[#e5a7ac] focus:border-[#e5a7ac]" placeholder="Ví dụ: Thư gửi anh yêu..." required>
+            </div>
+            
+            <div>
+                <label for="letterContent" class="block text-sm font-medium text-gray-700 mb-1">Nội dung thư:</label>
+                <textarea name="NoiDungThu" id="letterContent" class="w-full h-64 p-4 rounded-md resize-none" placeholder="Viết những lời từ trái tim em vào đây..." required></textarea>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button type="submit" class="bg-[#e5a7ac] hover:bg-[#d17c7c] text-white font-semibold py-3 px-8 rounded-full shadow-md text-lg">
+                    Gửi đi 💌
+                </button>
+            </div>
+        </form>
+
+        <footer class="text-center mt-10 text-xs text-gray-500">
+            <p>Khi nhấn "Gửi đi", sẽ không có cách nào để gửi lại một lần nữa.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
